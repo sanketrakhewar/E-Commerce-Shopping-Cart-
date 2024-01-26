@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <section class="maincon">
+    <div class="container text-center mt-0 py-3 ">
+        <h3>Our Freatured</h3>
+        <hr class="mx-auto">
+        <p>Here you can check out our new products with fair price </p>
+      </div> 
+      <div class="row mx-auto container-fluid ">
+        <div class="product text-center col-lg-3 col-md-4" data-id="1" data-product="T-Shirt" data-name="shop 1" data-price="60.00">
+          <img class="img-fluid mb-3" src="./shop/1.jpg" alt="shop 1">
+          <h5 class="p-name">T-Shirt</h5>
+          <h4 class="p-price">$60.00</h4>
+          <button class="buy-btn" onclick="addToCart(1,'T-Shirt','shop 1',60.00)">Add to cart</button>
+        </div>
+        <div class="product text-center col-lg-3 col-md-4 " data-id="2" data-product="Sports Shoes" data-name="shop 2" data-price="180.00">
+          <img class="img-fluid mb-3" src="./shop/2.jpg" alt="Sports Shoes">
+          <h5 class="p-name">Sports Shoes</h5>
+          <h4 class="p-price">$180.00</h4>
+          <button class="buy-btn" onclick="addToCart(2,'Sports Shoes','shop 2',180.00)">Add to cart</button>
+        </div>
+        <div class="product text-center col-lg-3 col-md-4 " data-id="3" data-product="Bag" data-name="shop 3" data-price="120.00">
+          <img class="img-fluid mb-3" src="./shop/3.jpg" alt="Bag">
+          <h5 class="p-name">Bag</h5>
+          <h4 class="p-price">$120.00</h4>
+          <button class="buy-btn" onclick="addToCart(3,'Bag','shop 3',120.00)">Add to cart</button>
+        </div>
+        <div class="product text-center col-lg-3 col-md-4 " data-id="4" data-product="Casual Shoes" data-name="shop 4" data-price="120.00">
+          <img class="img-fluid mb-3" src="./shop/4.jpg" alt="Casual Shoes">
+          <h5 class="p-name">Casual Shoes</h5>
+          <h4 class="p-price">$120.00</h4>
+          <button class="buy-btn"onclick="addToCart(4,'Casual Shoes','shop 4',120.00)">Add to cart</button>
+        </div>
+      </div>
+      </div>
+      <div class="row mx-auto container-fluid">
+        <div class="product text-center col-lg-3 col-md-4 " data-id="5" data-product="Cap" data-name="shop 5" data-price="90.00">
+          <img class="img-fluid mb-3" src="./shop/5.jpg" alt="Cap">
+          <h5 class="p-name">Cap</h5>
+          <h4 class="p-price">$90.00</h4>
+          <button class="buy-btn" onclick="addToCart(5,'Cap','shop 5',90.00)">Add to cart</button>
+        </div>
+        <div class="product text-center col-lg-3 col-md-4 " data-id="6" data-product="Coat" data-name="shop 6" data-price="190.00">
+          <img class="img-fluid mb-3" src="./shop/6.jpg" alt="Coat">
+          <h5 class="p-name">Coat</h5>
+          <h4 class="p-price">$190.00</h4>
+          <button class="buy-btn" onclick="addToCart(6,'Coat','shop 6',190.00)">Add to cart</button>
+        </div>
+        <div class="product text-center col-lg-3 col-md-4 " data-id="7" data-product="Casual Shoes" data-name="shop 7" data-price="150.00">
+          <img class="img-fluid mb-3" src="./shop/7.jpg" alt="Casual Shoes">
+          <h5 class="p-name">Casual Shoes</h5>
+          <h4 class="p-price">$150.00</h4>
+          <button class="buy-btn" onclick="addToCart(7,'Casual Shoes','shop 7',150.00)">Add to cart</button>
+        </div>
+        <div class="product text-center col-lg-3 col-md-4 "  data-id="8" data-product="Jacket" data-name="shop 8" data-price="150.00">
+          <img class="img-fluid mb-3" src="./shop/8.jpg" alt="Jacket">
+          <h5 class="p-name">Jacket</h5>
+          <h4 class="p-price">$150.00</h4>
+          <button onclick="addToCart(8,'Jacket','shop 8',150.00)" class="buy-btn">Add to cart</button>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid">
+      <h2 class="font-weight-bold pt-5">Shopping Cart</h2>
+      <hr>
+    </section>
+     <section id="cart-container" class="container-fluid">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Total</td>
+            <td>Remove</td>
+          </tr>
+        </thead>
+      </table>
+        <div id="cart"></div>
+    </section> 
+    <section id="cart-bottom" class="container-fluid mt-4 ">
+      <div class="row ">
+        <div class="total col-lg-4 col-md-4 ">
+          <div>
+            <h5 class="mb-0">CART TOTAL</h5>
+          </div>
+          <div class="d-flex justify-content-between">
+            <h4 class="m-2">Total Price:</h4>
+            <h4 class="m-2" id="total">$0</h4>
+          </div>
+          <button class="ml-auto mt-2 mb-2">PROCCED TO CHECKOUT</button>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
+
