@@ -12,6 +12,7 @@ function addToCart(id, product, name, price) {
   }
 
   updateCart();
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 // Function to update the cart display
@@ -36,11 +37,11 @@ function updateCart() {
       </tbody>
     `;
 
-    const totalPriceElement = document.getElementById('total');
-    totalPriceElement.innerHTML = `<strong><h4> $${calculateTotalPrice()}</h4></strong>`;
-
     cartElement.appendChild(cartItemElement);
   });
+  
+  const totalPriceElement = document.getElementById('total');
+  totalPriceElement.innerHTML = `<strong><h4> $${calculateTotalPrice()}</h4></strong>`;
   // Update localStorage
   localStorage.setItem('cart', JSON.stringify(cartItems));
 }
